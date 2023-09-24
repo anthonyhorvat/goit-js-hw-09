@@ -4,11 +4,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const body = document.getElementsByTagName("body");
-const startButton = document.querySelector("[data-start]");
-const stopButton = document.querySelector("[data-stop]");
-startButton.addEventListener("click", onStart);
-stopButton.addEventListener("click", onStop);
+const body = document.getElementsByTagName('body');
+const startButton = document.querySelector('[data-start]');
+const stopButton = document.querySelector('[data-stop]');
+startButton.addEventListener('click', onStart);
+stopButton.addEventListener('click', onStop);
 
 function disableStartButton() {
   startButton.disabled = true;
@@ -17,6 +17,7 @@ function enableStartButton() {
   startButton.disabled = false;
 }
 
+let timerId;
 function onStart() {
   disableStartButton();
   timerId = setInterval(() => {
