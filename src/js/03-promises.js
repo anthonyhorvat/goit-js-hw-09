@@ -5,7 +5,7 @@ const formEl = document.querySelector('.form');
 formEl.addEventListener('input', event => {
   event.preventDefault();
   const elements = event.currentTarget;
-  refs = {
+  const refs = {
     delay: Number(elements.delay.value),
     step: Number(elements.step.value),
     amount: Number(elements.amount.value),
